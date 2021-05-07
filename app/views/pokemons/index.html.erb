@@ -1,4 +1,11 @@
-<h1>Pokemons#index</h1>
+<h1>ポケモンリスト</h1>
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_cont, "ポケモン名"%>
+  <%= f.search_field :name_cont %>
+  <%= f.label :level_eq, "レベル" %>
+  <%= f.search_field :level_eq %>
+  <%= f.submit "検索" %>
+<% end %>
 <table border="5">
   <tr align="center">
     <th bgcolor="#7fffd4">名前</th>

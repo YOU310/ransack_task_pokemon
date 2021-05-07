@@ -9,7 +9,7 @@
 require "faker"
 Faker::Config.locale = :ja
 
-100.times do
+500.times do
   Pokemon.create!(name: Faker::Games::Pokemon.name, level: rand(1..100))
 end
 
