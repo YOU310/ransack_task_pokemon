@@ -1,5 +1,7 @@
 class PokemonsController < ApplicationController
+  PER_PAGE = 20
+  
   def index
-    @pokemons = Pokemon.limit(20)
+    @pokemons = Pokemon.page(params[:page]).per(PER_PAGE)
   end
 end

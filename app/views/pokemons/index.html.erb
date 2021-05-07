@@ -1,2 +1,16 @@
 <h1>Pokemons#index</h1>
-<p>Find me in app/views/pokemons/index.html.erb</p>
+<table border="5">
+  <tr align="center">
+    <th bgcolor="#7fffd4">名前</th>
+    <th bgcolor="#7fffd4">レベル</th>
+  </tr>
+
+  <% @pokemons.each do |pokemon| %>
+  <tr align="center">
+    <td><%= pokemon.name %></td>
+    <td><%= pokemon.level %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= paginate @pokemons %>
